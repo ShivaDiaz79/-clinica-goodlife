@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  right: 20px;
+  top: 10px;
+  display: none; /* Por defecto, ocultar en dispositivos móviles */
+}
+
+.menu {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 100%; /* Toma toda la altura de la pantalla */
+  
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column;
+  
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  .header {
+    display: block; /* Mostrar en dispositivos móviles */
+    z-index: 1; /* Asegurar que se muestre encima de todo */height: 100%; 
+  }
+}
+
+/* Media query para escritorio */
+@media (min-width: 768px) {
+  .header {
+    display: none; /* Ocultar en escritorio */
+  }
+}

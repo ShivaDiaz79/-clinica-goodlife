@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px 40px 50px 40px;
+  height: 100%;
+  box-sizing: border-box;
+  .body {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    .linkContainer {
+      perspective: 120px;
+      perspective-origin: bottom;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 46px;
+    }
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      width: 50%;
+      margin-top: 5px;
+    }
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  .header {
+    display: block; /* Mostrar en dispositivos móviles */
+    z-index: 999; /* Asegurar que se muestre encima de todo */
+  }
+
+  .menu {
+    height: 400px; /* Cambiar la altura del menú móvil a 400px (puedes ajustar este valor) */
+  }
+
+  .nav {
+    .body {
+      padding: 50px 20px; /* Ajustar el relleno interno para el contenido del menú móvil */
+    }
+  }
+}

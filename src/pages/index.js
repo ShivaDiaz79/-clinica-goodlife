@@ -1,9 +1,34 @@
-import React from 'react'
+/* eslint-disable react/jsx-no-undef */
+import Layout from "@/components/Layout";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import BackgroundImageWhithButton from "@/components/BackgroundImageWithButton";
+import Testimonios from "@/components/Testimonios";
+
 
 const index = () => {
+  const handleButtonClick = () => {
+    // Lógica a ejecutar cuando se haga clic en el botón
+    console.log("Botón clickeado");
+  };
   return (
-    <div className='bg-blue-300 h-screen text-center py-60'> CLINICA GOOD LIFE</div>
-  )
-}
+    <Layout>
+      <div className="h-full">
+        <BackgroundImageWhithButton
+          imageUrl="https://res.cloudinary.com/di1v23yy0/image/upload/v1701711446/sol_bnwuiy.jpg" // Ruta a la imagen en tu carpeta pública
+          buttonText="Click Me"
+          buttonClickHandler={handleButtonClick}
+        />
+      </div>
 
-export default index
+      <div>
+        <Hero />
+      </div>
+      <div className="">
+        <Testimonios />
+      </div>
+    </Layout>
+  );
+};
+
+export default index;
